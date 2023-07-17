@@ -1,9 +1,9 @@
-package dev.davidsalomon;
+package dev.davidsalomon.functions;
 
 public class ConversorDistancia {
     double distancia, conversion;
 
-    public void ConversorTemperatura(double distancia) {
+    public ConversorDistancia(double distancia) {
         this.distancia = distancia;
         this.conversion = 0;
     }
@@ -25,7 +25,7 @@ public class ConversorDistancia {
     public double fromMile(TipoDistancia d) {
         switch (d) {
             case KM:
-                this.conversion = distancia * 1.60934;
+                this.conversion = distancia / 0.621371;
                 break;
             case MILE:
                 this.conversion = distancia;
@@ -35,7 +35,6 @@ public class ConversorDistancia {
         }
         return conversion;
     }
-
 
     public enum TipoDistancia {
         KM, MILE

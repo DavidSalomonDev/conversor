@@ -1,4 +1,4 @@
-package dev.davidsalomon;
+package dev.davidsalomon.functions;
 
 public class ConversorTemperatura {
     double temperatura, conversion;
